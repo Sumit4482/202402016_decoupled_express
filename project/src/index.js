@@ -9,6 +9,13 @@ const port = 3000;
 // Middleware to parse JSON request bodies
 app.use(bodyParser.json());
 
+
+const useMongo = true;
+module.exports = {
+    useMongo
+};
+
+
 // Routes
 app.use('/products', productRoutes);
 app.use('/cart',cartRoutes)

@@ -22,7 +22,6 @@ async function deleteProduct(req, res) {
     }
   }
 
-
   // Controller function to handle updating a product
 async function updateProduct(req, res) {
     try {
@@ -40,7 +39,7 @@ async function updateProduct(req, res) {
 async function getAllProducts(req, res) {
   try {
     const products = await productService.getAllProducts(); // Retrieve all products from database
-    console.log("GETTING ALL PRODUCTSSSSS");
+    console.log("GSumit");
     res.json(products); // Respond with the list of products
   } catch (error) {
     res.status(500).json({ error: error.message }); // Handle errors

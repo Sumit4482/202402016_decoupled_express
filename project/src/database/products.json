@@ -1,200 +1,236 @@
 [
-    {
-      "id": "1",
-      "name": "Smartphone X",
-      "description": "The latest smartphone with advanced features.",
-      "price": 699.99,
-      "category": "Electronics",
-      "image": "https://example.com/smartphone-x.jpg",
-      "stock": 50,
-      "keywords": [
-        "smartphone",
-        "electronics",
-        "mobile"
-      ]
-    },
-    {
-      "id": "2",
-      "name": "Laptop Pro",
-      "description": "Powerful laptop for work and entertainment.",
-      "price": 1299.99,
-      "category": "Electronics",
-      "image": "https://example.com/laptop-pro.jpg",
-      "stock": 30,
-      "keywords": [
-        "laptop",
-        "electronics",
-        "computer"
-      ]
-    },
-    {
-      "id": "3",
-      "name": "Smart Watch",
-      "description": "Stay connected with this stylish smartwatch.",
-      "price": 199.99,
-      "category": "Electronics",
-      "image": "https://example.com/smart-watch.jpg",
-      "stock": 100,
-      "keywords": [
-        "smartwatch",
-        "electronics",
-        "wearable"
-      ]
-    },
-    {
-      "id": "4",
-      "name": "Wireless Headphones",
-      "description": "Enjoy immersive sound with wireless convenience.",
-      "price": 99.99,
-      "category": "Electronics",
-      "image": "https://example.com/wireless-headphones.jpg",
-      "stock": 75,
-      "keywords": [
-        "headphones",
-        "electronics",
-        "audio"
-      ]
-    },
-    {
-      "id": "5",
-      "name": "Tablet Mini",
-      "description": "Compact tablet for entertainment on the go.",
-      "price": 299.99,
-      "category": "Electronics",
-      "image": "https://example.com/tablet-mini.jpg",
-      "stock": 40,
-      "keywords": [
-        "tablet",
-        "electronics",
-        "mobile"
-      ]
-    },
-    {
-      "id": "6",
-      "name": "Smart TV",
-      "description": "Transform your living room with this smart TV.",
-      "price": 899.99,
-      "category": "Electronics",
-      "image": "https://example.com/smart-tv.jpg",
-      "stock": 20,
-      "keywords": [
-        "tv",
-        "electronics",
-        "entertainment"
-      ]
-    },
-    {
-      "id": "7",
-      "name": "Gaming Console",
-      "description": "Experience immersive gaming with this powerful console.",
-      "price": 399.99,
-      "category": "Electronics",
-      "image": "https://example.com/gaming-console.jpg",
-      "stock": 15,
-      "keywords": [
-        "gaming",
-        "electronics",
-        "entertainment"
-      ]
-    },
-    {
-      "id": "8",
-      "name": "Digital",
-      "description": "Capture memorable moments with this high-quality camera.",
-      "price": 499.99,
-      "category": "Electronics",
-      "image": "https://example.com/digital-camera.jpg",
-      "stock": 25,
-      "keywords": [
-        "camera",
-        "electronics",
-        "photography"
-      ]
-    },
-    {
-      "id": "9",
-      "name": "Wireless Router",
-      "description": "Ensure fast and reliable internet connectivity with this router.",
-      "price": 79.99,
-      "category": "Electronics",
-      "image": "https://example.com/wireless-router.jpg",
-      "stock": 35,
-      "keywords": [
-        "router",
-        "electronics",
-        "networking"
-      ]
-    },
-    {
-      "id": "22",
-      "name": "iPhone 17",
-      "description": "Latest iPhone Model",
-      "price": 999.99,
-      "category": "Electronics",
-      "image": "https://example.com/new-product.jpg",
-      "stock": 15,
-      "keywords": [
-        "apple",
-        "iPhone",
-        "latest"
-      ]
-    },
-    {
-      "id": "659973",
-      "name": "Home Theater",
-      "description": "Enjoy music wirelessly with this portable speaker.",
-      "price": 10.99,
-      "category": "Electronics",
-      "image": "https://example.com/bluetooth-speaker.jpg",
-      "stock": 5,
-      "keywords": [
-        "speaker",
-        "electronics",
-        "audio"
-      ]
-    },
-    {
-      "id": "354684",
-      "name": "Logitech Mouse",
-      "description": "Enjoy Surfing and Gaming.",
-      "price": 77.99,
-      "category": "Electronics",
-      "image": "https://example.com/innovapptive-bottle.jpg",
-      "stock": 7,
-      "keywords": [
-        "mouse",
-        "electronics",
-        "Logitech"
-      ]
-    },
-    {
-      "name": "Laptop Charger",
-      "description": "Enjoy Surfing and Gaming.",
-      "price": 77.99,
-      "category": "Electronics",
-      "image": "https://example.com/innovapptive-bottle.jpg",
-      "stock": 7,
-      "keywords": [
-        "mouse",
-        "electronics",
-        "Logitech"
-      ],
-      "_id": "65d1c63453fe5d8f14f65907",
-      "__v": 0
-    },
-    {
-      "name": "Laptop Charger",
-      "description": "Enjoy Surfing and Gaming.",
-      "price": 77.99,
-      "category": "Electronics",
-      "image": "https://example.com/innovapptive-bottle.jpg",
-      "stock": 7,
-      "keywords": [
-        "mouse",
-        "electronics",
-        "Logitech"
-      ],
-      "_id": "65d204d7effac15610e9addc",
-      "__v": 0
-    }
-  ]
+  {
+    "id": "1",
+    "name": "Smartphone X",
+    "description": "The latest smartphone with advanced features.",
+    "price": 699.99,
+    "category": "Electronics",
+    "image": "https://example.com/smartphone-x.jpg",
+    "stock": 50,
+    "keywords": [
+      "smartphone",
+      "electronics",
+      "mobile"
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Laptop Pro",
+    "description": "Powerful laptop for work and entertainment.",
+    "price": 1299.99,
+    "category": "Electronics",
+    "image": "https://example.com/laptop-pro.jpg",
+    "stock": 30,
+    "keywords": [
+      "laptop",
+      "electronics",
+      "computer"
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Smart Watch",
+    "description": "Stay connected with this stylish smartwatch.",
+    "price": 199.99,
+    "category": "Electronics",
+    "image": "https://example.com/smart-watch.jpg",
+    "stock": 100,
+    "keywords": [
+      "smartwatch",
+      "electronics",
+      "wearable"
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Wireless Headphones",
+    "description": "Enjoy immersive sound with wireless convenience.",
+    "price": 99.99,
+    "category": "Electronics",
+    "image": "https://example.com/wireless-headphones.jpg",
+    "stock": 75,
+    "keywords": [
+      "headphones",
+      "electronics",
+      "audio"
+    ]
+  },
+  {
+    "id": "5",
+    "name": "Tablet Mini",
+    "description": "Compact tablet for entertainment on the go.",
+    "price": 299.99,
+    "category": "Electronics",
+    "image": "https://example.com/tablet-mini.jpg",
+    "stock": 40,
+    "keywords": [
+      "tablet",
+      "electronics",
+      "mobile"
+    ]
+  },
+  {
+    "id": "6",
+    "name": "Smart TV",
+    "description": "Transform your living room with this smart TV.",
+    "price": 899.99,
+    "category": "Electronics",
+    "image": "https://example.com/smart-tv.jpg",
+    "stock": 20,
+    "keywords": [
+      "tv",
+      "electronics",
+      "entertainment"
+    ]
+  },
+  {
+    "id": "7",
+    "name": "Gaming Console",
+    "description": "Experience immersive gaming with this powerful console.",
+    "price": 399.99,
+    "category": "Electronics",
+    "image": "https://example.com/gaming-console.jpg",
+    "stock": 15,
+    "keywords": [
+      "gaming",
+      "electronics",
+      "entertainment"
+    ]
+  },
+  {
+    "id": "8",
+    "name": "Digital",
+    "description": "Capture memorable moments with this high-quality camera.",
+    "price": 499.99,
+    "category": "Electronics",
+    "image": "https://example.com/digital-camera.jpg",
+    "stock": 25,
+    "keywords": [
+      "camera",
+      "electronics",
+      "photography"
+    ]
+  },
+  {
+    "id": "9",
+    "name": "Wireless Router",
+    "description": "Ensure fast and reliable internet connectivity with this router.",
+    "price": 79.99,
+    "category": "Electronics",
+    "image": "https://example.com/wireless-router.jpg",
+    "stock": 35,
+    "keywords": [
+      "router",
+      "electronics",
+      "networking"
+    ]
+  },
+  {
+    "id": "22",
+    "name": "iPhone 17",
+    "description": "Latest iPhone Model",
+    "price": 999.99,
+    "category": "Electronics",
+    "image": "https://example.com/new-product.jpg",
+    "stock": 15,
+    "keywords": [
+      "apple",
+      "iPhone",
+      "latest"
+    ]
+  },
+  {
+    "id": "659973",
+    "name": "Home Theater",
+    "description": "Enjoy music wirelessly with this portable speaker.",
+    "price": 10.99,
+    "category": "Electronics",
+    "image": "https://example.com/bluetooth-speaker.jpg",
+    "stock": 5,
+    "keywords": [
+      "speaker",
+      "electronics",
+      "audio"
+    ]
+  },
+  {
+    "id": "354684",
+    "name": "Karan Kharode",
+    "description": "Enjoy Surfing and Gaming.",
+    "price": 77.99,
+    "category": "Electronics",
+    "image": "https://example.com/innovapptive-bottle.jpg",
+    "stock": 7,
+    "keywords": [
+      "mouse",
+      "electronics",
+      "Logitech"
+    ]
+  },
+  {
+    "name": "Sumit Nawathe",
+    "description": "Enjoy Surfing and Gaming.",
+    "price": 77.99,
+    "category": "Electronics",
+    "image": "https://example.com/innovapptive-bottle.jpg",
+    "stock": 7,
+    "keywords": [
+      "mouse",
+      "electronics",
+      "Logitech"
+    ]
+  },
+  {
+    "name": "Dragon Nawathe",
+    "description": "Enjoy Surfing and Gaming.",
+    "price": 77.99,
+    "category": "Electronics",
+    "image": "https://example.com/innovapptive-bottle.jpg",
+    "stock": 7,
+    "keywords": [
+      "mouse",
+      "electronics",
+      "Logitech"
+    ]
+  },
+  {
+    "name": "Mohit Nawathe",
+    "description": "Enjoy Surfing and Gaming.",
+    "price": 77.99,
+    "category": "Electronics",
+    "image": "https://example.com/innovapptive-bottle.jpg",
+    "stock": 7,
+    "keywords": [
+      "mouse",
+      "electronics",
+      "Logitech"
+    ]
+  },
+  {
+    "name": "Mohit Bhau",
+    "description": "Enjoy Surfing and Gaming.",
+    "price": 77.99,
+    "category": "Electronics",
+    "image": "https://example.com/innovapptive-bottle.jpg",
+    "stock": 7,
+    "keywords": [
+      "mouse",
+      "electronics",
+      "Logitech"
+    ]
+  },
+  {
+    "_id": "ff9043ea-364c-4e63-a875-ab5e309b2073",
+    "name": "yatharth",
+    "description": "Enjoy Surfing and Gaming.",
+    "price": 77.99,
+    "category": "Electronics",
+    "image": "https://example.com/innovapptive-bottle.jpg",
+    "stock": 7,
+    "keywords": [
+      "mouse",
+      "electronics",
+      "Logitech"
+    ]
+  }
+]

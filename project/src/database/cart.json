@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "productId": "1",
+    "quantity": 3
+  },
+  {
+    "productId": "2",
+    "quantity": 1
+  },
+  {
+    "productId": "ff9043ea-364c-4e63-a875-ab5e309b2073",
+    "quantity": 1
+  }
+]

@@ -3,7 +3,7 @@ const cartService = require('../services/cartService');
 // Controller function to handle adding a product to the shopping cart
 async function addToCart(req, res) {
   try {
-    const productId = req.body.productId; // Extract product ID from request body
+    const productId = req.body._id; // Extract product ID from request body
     const addedProduct = await cartService.addToCart(productId); // Add product to cart
     res.json(addedProduct); // Respond with the added product
   } catch (error) {
@@ -26,6 +26,7 @@ async function getAllCartContents(req, res) {
 async function removeFromCart(req, res) {
     try {
       const productId = req.params.productId; // Get the product ID from the request parameters
+      console.log(productId);
       await cartService.removeFromCart(productId); // Remove the product from the cart
       res.json({ success: true }); // Respond with success message
     } catch (error) {
