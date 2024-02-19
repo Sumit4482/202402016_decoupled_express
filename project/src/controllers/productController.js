@@ -25,7 +25,7 @@ async function deleteProduct(req, res) {
   // Controller function to handle updating a product
 async function updateProduct(req, res) {
     try {
-      const productId = req.params.id; // Get product ID from request parameters
+      const productId = req.params._id; // Get product ID from request parameters
       const updatedProductData = req.body; // Get updated product data from request body
       const updatedProduct = await productService.updateProduct(productId, updatedProductData); // Update product in database
       res.json(updatedProduct); // Respond with the updated product

@@ -3,7 +3,7 @@ const path = require('path');
 const Product = require('../models/Product');
 const dataFilePath = path.join(__dirname, '../database/products.json');
 const { v4: uuidv4 } = require('uuid');
-let useMongo = true ;
+let useMongo = false ;
 
 
 // Service function to add a new product to the database
