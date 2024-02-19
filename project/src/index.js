@@ -28,7 +28,7 @@ const mongoose = require('mongoose');
 const uri = 'mongodb+srv://root:root@cluster0.6zztuof.mongodb.net/ecom_data?retryWrites=true&w=majority';
 
 // Connect to MongoDB Atlas
-mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(uri, {  })
   .then(() => console.log('Connected to MongoDB Atlas'))
   .catch(err => console.error('Error connecting to MongoDB Atlas', err));
 

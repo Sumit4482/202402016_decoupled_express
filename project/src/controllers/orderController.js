@@ -1,8 +1,9 @@
 
 
-const orderService = require('../services/orderService');
+const orderService = require('../services/productService');
 
 async function getAllOrders(req, res) {
+  
   try {
     const orders = await orderService.getAllOrders();
     res.json(orders);

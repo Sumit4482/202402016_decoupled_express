@@ -25,7 +25,8 @@ async function deleteProduct(req, res) {
   // Controller function to handle updating a product
 async function updateProduct(req, res) {
     try {
-      const productId = req.params._id; // Get product ID from request parameters
+      const productId = req.params.id; // Get product ID from request parameters
+      console.log("Sumit check :",productId);
       const updatedProductData = req.body; // Get updated product data from request body
       const updatedProduct = await productService.updateProduct(productId, updatedProductData); // Update product in database
       res.json(updatedProduct); // Respond with the updated product
@@ -33,7 +34,6 @@ async function updateProduct(req, res) {
       res.status(500).json({ error: error.message }); // Handle errors
     }
   }
-
 
   // Controller function to handle retrieving all products
 async function getAllProducts(req, res) {

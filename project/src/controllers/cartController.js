@@ -1,9 +1,10 @@
-const cartService = require('../services/cartService');
+const cartService = require('../services/productService');
 
 // Controller function to handle adding a product to the shopping cart
 async function addToCart(req, res) {
   try {
-    const productId = req.body._id; // Extract product ID from request body
+    const productId = req.body._id;  // Extract product ID from request body
+
     const addedProduct = await cartService.addToCart(productId); // Add product to cart
     res.json(addedProduct); // Respond with the added product
   } catch (error) {

@@ -1,0 +1,109 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Decoupled",
+    "dateExported": "2024-02-19T05:49:01.900Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "a5a0c645-3c53-480a-935c-a74848cf5e7a",
+            "colId": "3317e9c4-227b-474b-b6ed-35c7821752af",
+            "containerId": "",
+            "name": "getAllProduct",
+            "url": "http://localhost:3000/products/",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-02-19T04:47:06.966Z",
+            "modified": "2024-02-19T04:47:32.967Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "72e87fff-a8aa-4872-91d6-09d1b9923945",
+            "colId": "3317e9c4-227b-474b-b6ed-35c7821752af",
+            "containerId": "",
+            "name": "addProduct",
+            "url": "http://localhost:3000/products/",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-02-19T04:49:50.961Z",
+            "modified": "2024-02-19T05:25:23.187Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"New Product-2\",\n  \"description\": \"Enjoy Surfing and Gaming.\",\n  \"price\": 77.99,\n  \"category\": \"Electronics\",\n  \"image\": \"https://example.com/innovapptive-bottle.jpg\",\n  \"stock\": 7,\n  \"keywords\": [\"mouse\",\"electronics\", \"Logitech\" ]\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "8518515c-ed2a-4d16-925d-5e2b2904b19f",
+            "colId": "3317e9c4-227b-474b-b6ed-35c7821752af",
+            "containerId": "",
+            "name": "getProductById",
+            "url": "http://localhost:3000/products/getbyId/65d1bfd3cebacb090cf14069",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-02-19T04:52:03.870Z",
+            "modified": "2024-02-19T04:52:41.818Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "7020fe1e-3c2c-427b-8754-3a0a2446dac0",
+            "colId": "3317e9c4-227b-474b-b6ed-35c7821752af",
+            "containerId": "",
+            "name": "deleteProduct",
+            "url": "http://localhost:3000/products/9d2ae02f-2542-4cfa-8cdd-d700f7541e58",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-02-19T04:53:26.735Z",
+            "modified": "2024-02-19T04:56:54.146Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "a452db82-378f-4bf8-b9f8-dc390286c463",
+            "colId": "3317e9c4-227b-474b-b6ed-35c7821752af",
+            "containerId": "",
+            "name": "searchProduct",
+            "url": "http://localhost:3000/products/search/?q=laptop",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-02-19T05:00:41.996Z",
+            "modified": "2024-02-19T05:25:00.246Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "q",
+                    "value": "laptop",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "f0827559-9076-4b10-9b14-f32a8027241e",
+            "colId": "3317e9c4-227b-474b-b6ed-35c7821752af",
+            "containerId": "",
+            "name": "updateProduct",
+            "url": "http://localhost:3000/products/ff9043ea-364c-4e63-a875-ab5e309b2073",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2024-02-19T05:07:48.860Z",
+            "modified": "2024-02-19T05:08:03.659Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "  {\r\n    \"_id\": \"ff9043ea-364c-4e63-a875-ab5e309b2073\",\r\n    \"name\": \"Shende yathart\",\r\n    \"description\": \"Enjoy Surfing and Gaming.\",\r\n    \"price\": 77.99,\r\n    \"category\": \"Electronics\",\r\n    \"image\": \"https://example.com/innovapptive-bottle.jpg\",\r\n    \"stock\": 7,\r\n    \"keywords\": [\r\n      \"mouse\",\r\n      \"electronics\",\r\n      \"Logitech\"\r\n    ]\r\n  }",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
