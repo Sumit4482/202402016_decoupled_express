@@ -9,10 +9,24 @@ const ordersFilePath = path.join(__dirname, "../database/order.json");
 const { v4: uuidv4 } = require('uuid');
 const Cart = require('../models/Cart');
 const Order = require('../models/Order')
+
+//To Switch Between Databases
 let useMongo = true ;
 
 
-// Service function to add a new product to the database
+/**
+ * Adds a new product to the inventory.
+ * @param {Object} productData - The data of the product to be added.
+ * @param {string} productData.name - The name of the product.
+ * @param {string} productData.description - The description of the product.
+ * @param {number} productData.price - The price of the product.
+ * @param {string} productData.category - The category of the product.
+ * @param {string} productData.image - The URL of the product image.
+ * @param {number} productData.stock - The stock quantity of the product.
+ * @param {Array<string>} productData.keywords - The keywords associated with the product.
+ * @returns {Promise<Object>} A promise that resolves to the added product object.
+ * @throws {Error} If there's an error while adding the product.
+ */
 async function addProduct(productData) {
   if (useMongo) {
       console.log("USING MONGO");
@@ -42,7 +56,12 @@ async function addProduct(productData) {
   }
 }
 
-// Service function to delete a product from the database
+/**
+ * Deletes a product from the inventory.
+ * @param {string} productId - The ID of the product to be deleted.
+ * @returns {Promise<void>} A promise that resolves when the product is successfully deleted.
+ * @throws {Error} If the product with the specified ID is not found or if there's an error while deleting the product.
+ */
 async function deleteProduct(productId) {
   if (useMongo) {
     console.log("USING MONGO");
@@ -83,7 +102,11 @@ async function deleteProduct(productId) {
   }
 }
 
-// Service function to retrieve all products from the database
+/**
+ * Retrieves a list of all available products.
+ * @returns {Promise<Array>} A promise that resolves to an array containing all products.
+ * @throws {Error} If there's an error while retrieving the products.
+ */
 async function getAllProducts() {
   if (useMongo) {
     console.log("USING MONGO");
@@ -105,7 +128,20 @@ async function getAllProducts() {
   }
 }
 
-// Service function to update an existing product in the database
+/**
+ * Updates information for an existing product in the inventory.
+ * @param {string} productId - The ID of the product to be updated.
+ * @param {Object} updatedProductData - The updated data of the product.
+ * @param {string} [updatedProductData.name] - The updated name of the product.
+ * @param {string} [updatedProductData.description] - The updated description of the product.
+ * @param {number} [updatedProductData.price] - The updated price of the product.
+ * @param {string} [updatedProductData.category] - The updated category of the product.
+ * @param {string} [updatedProductData.image] - The updated URL of the product image.
+ * @param {number} [updatedProductData.stock] - The updated stock quantity of the product.
+ * @param {Array<string>} [updatedProductData.keywords] - The updated keywords associated with the product.
+ * @returns {Promise<Object>} A promise that resolves to the updated product object.
+ * @throws {Error} If the product with the specified ID is not found or if there's an error while updating the product.
+ */
 async function updateProduct(productId, updatedProductData) {
   if (useMongo) {
     try {
@@ -150,7 +186,12 @@ try {
   }
 }
   
-  // Service function to retrieve information for a specific product from the database
+/**
+ * Retrieves details of a specific product by its ID.
+ * @param {string} productId - The ID of the product to retrieve.
+ * @returns {Promise<Object|null>} A promise that resolves to the product object if found, or null if not found.
+ * @throws {Error} If there's an error while retrieving the product.
+ */
   async function getProductById(productId) {
     if (useMongo) {
       console.log("USING MONGO");
@@ -173,7 +214,12 @@ try {
     }
   }
 
-// Service function to search for products based on name and keywords
+/**
+ * Searches for products based on their names.
+ * @param {string} name - The name of the product to search for.
+ * @returns {Promise<Array>} A promise that resolves to an array of products matching the search criteria.
+ * @throws {Error} If there's an error while searching for products.
+ */
 async function searchProducts(query) {
   if (useMongo) {
     console.log("USING MONGO");
@@ -242,7 +288,7 @@ async function readCartData() {
 //     return [];
 //   }
 // }
-
+//To write order data in the JSON file
 async function writeOrderData(data) {
   try {
     await fsp.writeFile(ordersFilePath, JSON.stringify(data, null, 2));
@@ -251,7 +297,11 @@ async function writeOrderData(data) {
   }
 }
 
-// Service function to get all contents of the cart
+/**
+ * Retrieves the contents of the shopping cart.
+ * @returns {Promise<Array>} A promise that resolves to an array containing all products in the cart.
+ * @throws {Error} If there's an error while retrieving the cart contents.
+ */
 async function getAllCartContents() {
 if (useMongo) {
 
@@ -285,6 +335,12 @@ async function writeCartData(data) {
   }
 }
 
+/**
+ * Adds a product to the shopping cart.
+ * @param {string} productId - The ID of the product to add to the cart.
+ * @returns {Promise<Object>} A promise that resolves to the added product in the cart.
+ * @throws {Error} If the product is not found or there's an error while adding it to the cart.
+ */
 async function addToCart(productId) {
   if (useMongo) {
     try {
@@ -364,7 +420,13 @@ async function addToCart(productId) {
   }
 }
 
-// Service function to remove a product from the shopping cart by its ID
+/**
+ * Removes a product from the shopping cart.
+ * @param {string} productId - The ID of the product to remove from the cart.
+ * @returns {Promise<Object>} A promise that resolves to the removed product from the cart.
+ * @throws {Error} If the product is not found in the cart or there's an error while removing it.
+ */
+
 async function removeFromCart(productId) {
   if (useMongo) {
     try {
@@ -427,6 +489,11 @@ async function removeFromCart(productId) {
   }
 }
 
+/**
+ * Processes the checkout and creates an order from the items in the cart.
+ * @returns {Promise<Object>} A promise that resolves to the created order object.
+ * @throws {Error} If the cart is empty or there's an error during the checkout process.
+ */
 async function checkout() {
   if (useMongo) {
     try {
@@ -515,12 +582,12 @@ async function checkout() {
     }
   }
 }
-
+//It generates unqiue orderId for every order
 function generateOrderId() {
 return Math.random().toString(36).substring(2, 10); // Generate a random alphanumeric string
 }
 
-//----------------------ORder Services----------------
+//----------------------Order Services----------------
 
 async function readOrderData() {
   try {
@@ -532,6 +599,11 @@ async function readOrderData() {
   }
 }
 
+/**
+ * Retrieves a list of all orders.
+ * @returns {Promise<Array>} A promise that resolves to an array containing all orders.
+ * @throws {Error} If there's an error while retrieving the orders.
+ */
 async function getAllOrders() {
   if (useMongo) {
     try {
@@ -562,6 +634,12 @@ async function getAllOrders() {
   }
 }
 
+/**
+ * Retrieves details of a specific order by its ID.
+ * @param {string} orderId - The ID of the order to retrieve.
+ * @returns {Promise<Object|null>} A promise that resolves to the order object if found, or null if not found.
+ * @throws {Error} If there's an error while retrieving the order.
+ */
 async function getOrderById(orderId) {
   if (useMongo) {
     try {
@@ -604,7 +682,12 @@ async function getOrderById(orderId) {
   }
 }
 
-
+/**
+ * Deletes an order by its ID.
+ * @param {string} orderId - The ID of the order to delete.
+ * @returns {Promise<void>} A promise that resolves when the order is successfully deleted.
+ * @throws {Error} If the order with the specified ID is not found or if there's an error while deleting the order.
+ */
 async function deleteOrderById(orderId) {
   if (useMongo) {
     try {

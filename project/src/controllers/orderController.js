@@ -2,6 +2,7 @@
 
 const orderService = require('../services/productService');
 
+//Controller function to Get all orders
 async function getAllOrders(req, res) {
   
   try {
@@ -12,6 +13,7 @@ async function getAllOrders(req, res) {
   }
 }
 
+//Controller function to Get Specific Order by ID
 async function getOrderById(req, res) {
     try {
       const orderId = req.params.orderId;
@@ -21,7 +23,7 @@ async function getOrderById(req, res) {
       res.status(404).json({ error: error.message });
     }
   }
-
+//Controller Funciton to delete the Order by using ID
   async function deleteOrderById(req, res) {
     try {
       const orderId = req.params.orderId;
